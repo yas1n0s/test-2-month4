@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shop — AURUM</title>
+    <meta name="description" content="Каталог AURUM: premium minimal одежда." />
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+  </head>
+  <body>
+    <div class="page" data-page>
+      <header class="header" data-header>
+        <div class="container header__inner">
+          <a class="logo" href="./index.html" data-link aria-label="AURUM Home">AURUM</a>
+
+          <nav class="nav" aria-label="Основное меню">
+            <a class="nav__link" href="./shop.html" data-link>Shop</a>
+            <a class="nav__link" href="./shop.html?tag=new" data-link>New</a>
+            <a class="nav__link" href="./shop.html?tag=sale" data-link>Sale</a>
+          </nav>
+
+          <div class="header__actions">
+            <a class="icon-btn" href="./cart.html" data-link aria-label="Cart">
+              <span class="icon icon--cart" aria-hidden="true"></span>
+              <span class="cart-badge" data-cart-count aria-label="Items in cart">0</span>
+            </a>
+            <button class="icon-btn header__burger" type="button" data-menu-open aria-label="Open menu">
+              <span class="icon icon--menu" aria-hidden="true"></span>
+            </button>
+          </div>
+        </div>
+
+        <div class="menu-overlay" data-menu-overlay aria-hidden="true">
+          <div class="menu-overlay__panel" role="dialog" aria-modal="true" aria-label="Mobile menu">
+            <div class="menu-overlay__top">
+              <span class="menu-overlay__brand">AURUM</span>
+              <button class="icon-btn" type="button" data-menu-close aria-label="Close menu">
+                <span class="icon icon--close" aria-hidden="true"></span>
+              </button>
+            </div>
+            <div class="menu-overlay__links">
+              <a class="menu-overlay__link" href="./shop.html" data-link>Shop</a>
+              <a class="menu-overlay__link" href="./shop.html?tag=new" data-link>New</a>
+              <a class="menu-overlay__link" href="./shop.html?tag=sale" data-link>Sale</a>
+              <a class="menu-overlay__link" href="./cart.html" data-link>Cart</a>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main>
+        <section class="section section--tight">
+          <div class="container">
+            <div class="shop-top" data-reveal>
+              <div>
+                <h1 class="h1">Shop</h1>
+                <p class="muted"><span data-results-count>0</span> items</p>
+              </div>
+              <div class="shop-top__controls">
+                <button class="btn btn--secondary show-on-mobile" type="button" data-open-filters>
+                  Filter
+                </button>
+                <label class="select">
+                  <span class="sr-only">Sort</span>
+                  <select data-sort>
+                    <option value="newest">Newest</option>
+                    <option value="price-asc">Price: Low to High</option>
+                    <option value="price-desc">Price: High to Low</option>
+                  </select>
+                </label>
+              </div>
+            </div>
+
+            <div class="shop-layout">
+              <aside class="filters" data-filters>
+                <div class="filters__head">
+                  <div class="filters__title">Filters</div>
+                  <button class="btn btn--ghost" type="button" data-reset>Reset</button>
+                </div>
+
+                <div class="filters__group">
+                  <div class="filters__label">Category</div>
+                  <label class="check">
+                    <input type="radio" name="category" value="" checked data-filter-category />
+                    <span>All</span>
+                  </label>
+                  <label class="check">
+                    <input type="radio" name="category" value="men" data-filter-category />
+                    <span>Men</span>
+                  </label>
+                  <label class="check">
+                    <input type="radio" name="category" value="women" data-filter-category />
+                    <span>Women</span>
+                  </label>
+                </div>
+
+                <div class="filters__group">
+                  <div class="filters__label">Price</div>
+                  <div class="price-range">
+                    <label class="input">
+                      <span class="input__label">Min</span>
+                      <input type="number" inputmode="numeric" min="0" step="1" data-price-min />
+                    </label>
+                    <label class="input">
+                      <span class="input__label">Max</span>
+                      <input type="number" inputmode="numeric" min="0" step="1" data-price-max />
+                    </label>
+                  </div>
+                </div>
+
+                <div class="filters__group">
+                  <div class="filters__label">Tag</div>
+                  <label class="check">
+                    <input type="checkbox" value="new" data-filter-tag />
+                    <span>New</span>
+                  </label>
+                  <label class="check">
+                    <input type="checkbox" value="sale" data-filter-tag />
+                    <span>Sale</span>
+                  </label>
+                </div>
+              </aside>
+
+              <section aria-label="Products" class="shop-main">
+                <div class="product-grid" data-products-grid>
+                  <div class="product-card skeleton" aria-hidden="true"></div>
+                  <div class="product-card skeleton" aria-hidden="true"></div>
+                  <div class="product-card skeleton" aria-hidden="true"></div>
+                  <div class="product-card skeleton" aria-hidden="true"></div>
+                  <div class="product-card skeleton" aria-hidden="true"></div>
+                  <div class="product-card skeleton" aria-hidden="true"></div>
+                  <div class="product-card skeleton" aria-hidden="true"></div>
+                  <div class="product-card skeleton" aria-hidden="true"></div>
+                </div>
+
+                <div class="empty" data-empty hidden>
+                  <div class="empty__title">Nothing found</div>
+                  <p class="muted">Попробуй изменить фильтры.</p>
+                </div>
+
+                <div class="shop-more" data-more>
+                  <button class="btn btn--primary" type="button" data-load-more>Load more</button>
+                </div>
+              </section>
+            </div>
+          </div>
+        </section>
+
+        <div class="sheet" data-filters-sheet aria-hidden="true">
+          <div class="sheet__backdrop" data-close-filters></div>
+          <div class="sheet__panel" role="dialog" aria-modal="true" aria-label="Filters">
+            <div class="sheet__top">
+              <div class="sheet__title">Filters</div>
+              <button class="icon-btn" type="button" data-close-filters aria-label="Close filters">
+                <span class="icon icon--close" aria-hidden="true"></span>
+              </button>
+            </div>
+            <div class="sheet__content" data-filters-sheet-content></div>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container footer__inner">
+          <div class="footer__col">
+            <div class="footer__brand">AURUM</div>
+            <p class="muted">Premium minimal clothing store UI.</p>
+          </div>
+          <div class="footer__col">
+            <div class="footer__title">Social</div>
+            <a class="footer__link" href="#">Instagram</a>
+            <a class="footer__link" href="#">TikTok</a>
+            <a class="footer__link" href="#">Pinterest</a>
+          </div>
+          <div class="footer__col">
+            <div class="footer__title">Info</div>
+            <a class="footer__link" href="#">Policy</a>
+            <a class="footer__link" href="#">Terms</a>
+            <a class="footer__link" href="#">Contacts</a>
+          </div>
+        </div>
+        <div class="container footer__bottom">
+          <span class="muted">© <span data-year></span> AURUM</span>
+        </div>
+      </footer>
+    </div>
+
+    <div class="toast-stack" data-toast-stack aria-live="polite" aria-atomic="true"></div>
+
+    <script type="module" src="./assets/js/pages/shop.js"></script>
+  </body>
+</html>

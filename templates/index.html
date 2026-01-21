@@ -1,0 +1,203 @@
+﻿<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AURUM вЂ” Premium Minimal Wear</title>
+    <meta name="description" content="Premium minimal РѕРґРµР¶РґР°. РќРѕРІРёРЅРєРё, sale Рё РїРѕРґР±РѕСЂРєРё." />
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+  </head>
+  <body>
+    <div class="page" data-page>
+      <header class="header" data-header>
+        <div class="container header__inner">
+          <a class="logo" href="./index.html" data-link aria-label="AURUM Home">AURUM</a>
+
+          <nav class="nav" aria-label="РћСЃРЅРѕРІРЅРѕРµ РјРµРЅСЋ">
+            <a class="nav__link" href="./shop.html" data-link>Shop</a>
+            <a class="nav__link" href="./shop.html?tag=new" data-link>New</a>
+            <a class="nav__link" href="./shop.html?tag=sale" data-link>Sale</a>
+          </nav>
+
+          <div class="header__actions">
+            <a class="icon-btn" href="./cart.html" data-link aria-label="Cart">
+              <span class="icon icon--cart" aria-hidden="true"></span>
+              <span class="cart-badge" data-cart-count aria-label="Items in cart">0</span>
+            </a>
+            <button class="icon-btn header__burger" type="button" data-menu-open aria-label="Open menu">
+              <span class="icon icon--menu" aria-hidden="true"></span>
+            </button>
+          </div>
+        </div>
+
+        <div class="menu-overlay" data-menu-overlay aria-hidden="true">
+          <div class="menu-overlay__panel" role="dialog" aria-modal="true" aria-label="Mobile menu">
+            <div class="menu-overlay__top">
+              <span class="menu-overlay__brand">AURUM</span>
+              <button class="icon-btn" type="button" data-menu-close aria-label="Close menu">
+                <span class="icon icon--close" aria-hidden="true"></span>
+              </button>
+            </div>
+            <div class="menu-overlay__links">
+              <a class="menu-overlay__link" href="./shop.html" data-link>Shop</a>
+              <a class="menu-overlay__link" href="./shop.html?tag=new" data-link>New</a>
+              <a class="menu-overlay__link" href="./shop.html?tag=sale" data-link>Sale</a>
+              <a class="menu-overlay__link" href="./cart.html" data-link>Cart</a>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main>
+        <section class="hero" aria-label="Hero">
+          <div class="hero__bg" aria-hidden="true"></div>
+          <div class="container hero__content">
+            <p class="eyebrow" data-reveal>AURUM / 2026</p>
+            <h1 class="hero__title" data-reveal data-reveal-delay="70">Premium minimal wear</h1>
+            <p class="hero__subtitle" data-reveal data-reveal-delay="140">РўРёС…Р°СЏ СЂРѕСЃРєРѕС€СЊ. Р§РёСЃС‚С‹Рµ СЃРёР»СѓСЌС‚С‹. РљРѕРјС„РѕСЂС‚ РІ РґРµС‚Р°Р»СЏС….</p>
+            <div class="hero__cta" data-reveal data-reveal-delay="210">
+              <a class="btn btn--primary" href="./shop.html" data-link>Shop now</a>
+              <a class="btn btn--ghost" href="./shop.html?tag=new" data-link>New arrivals</a>
+            </div>
+          </div>
+        </section>
+
+        <section class="section" aria-label="Categories">
+          <div class="container">
+            <div class="section__head" data-reveal>
+              <h2 class="h2">Categories</h2>
+              <p class="muted">РџРѕРґР±РѕСЂРєРё РґР»СЏ Р±С‹СЃС‚СЂРѕРіРѕ РІС‹Р±РѕСЂР°.</p>
+            </div>
+
+            <div class="grid grid--cats">
+              <a class="cat-card" href="./shop.html?category=men" data-link data-reveal>
+                <div class="cat-card__media" data-cat="men" aria-hidden="true"></div>
+                <div class="cat-card__meta">
+                  <span class="cat-card__title">Men</span>
+                  <span class="cat-card__arrow">в†’</span>
+                </div>
+              </a>
+              <a class="cat-card" href="./shop.html?category=women" data-link data-reveal>
+                <div class="cat-card__media" data-cat="women" aria-hidden="true"></div>
+                <div class="cat-card__meta">
+                  <span class="cat-card__title">Women</span>
+                  <span class="cat-card__arrow">в†’</span>
+                </div>
+              </a>
+              <a class="cat-card" href="./shop.html?tag=new" data-link data-reveal>
+                <div class="cat-card__media" data-cat="new" aria-hidden="true"></div>
+                <div class="cat-card__meta">
+                  <span class="cat-card__title">New</span>
+                  <span class="cat-card__arrow">в†’</span>
+                </div>
+              </a>
+              <a class="cat-card" href="./shop.html?tag=sale" data-link data-reveal>
+                <div class="cat-card__media" data-cat="sale" aria-hidden="true"></div>
+                <div class="cat-card__meta">
+                  <span class="cat-card__title">Sale</span>
+                  <span class="cat-card__arrow">в†’</span>
+                </div>
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <section class="section" aria-label="Featured products">
+          <div class="container">
+            <div class="section__head" data-reveal>
+              <h2 class="h2">Featured</h2>
+              <p class="muted">Р’С‹Р±СЂР°РЅРЅС‹Рµ РїРѕР·РёС†РёРё РЅРµРґРµР»Рё.</p>
+            </div>
+
+            <div class="product-grid" data-featured-grid>
+              <article class="product-card" data-reveal>
+                <a class="product-card__link" href="./product.html?slug=aurum-coat-noir" data-link>
+                  <div class="product-card__media">
+                    <img class="product-card__img" src="https://images.unsplash.com/photo-1520975693411-bca0a1f0dba6?auto=format&fit=crop&w=1400&q=60" loading="lazy" decoding="async" alt="Aurum Coat Noir" />
+                    <img class="product-card__img is-alt" src="https://images.unsplash.com/photo-1520975684505-0644a9599cf1?auto=format&fit=crop&w=1400&q=60" loading="lazy" decoding="async" alt="" />
+                  </div>
+                  <div class="product-card__body">
+                    <div class="badges"><span class="badge badge--new">New</span></div>
+                    <h3 class="product-card__title">Aurum Coat Noir</h3>
+                    <div class="product-card__price"><span>12	90 СЃРѕРј</span></div>
+                  </div>
+                </a>
+              </article>
+
+              <article class="product-card" data-reveal>
+                <a class="product-card__link" href="./product.html?slug=silk-shirt-ivory" data-link>
+                  <div class="product-card__media">
+                    <img class="product-card__img" src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=1400&q=60" loading="lazy" decoding="async" alt="Silk Shirt Ivory" />
+                    <img class="product-card__img is-alt" src="https://images.unsplash.com/photo-1485968579580-b6d095142e6e?auto=format&fit=crop&w=1400&q=60" loading="lazy" decoding="async" alt="" />
+                  </div>
+                  <div class="product-card__body">
+                    <div class="badges"><span class="badge badge--new">New</span><span class="badge badge--sale">Sale</span></div>
+                    <h3 class="product-card__title">Silk Shirt Ivory</h3>
+                    <div class="product-card__price"><span>690 СЃРѕРј</span><span class="product-card__old">7	90 СЃРѕРј</span></div>
+                  </div>
+                </a>
+              </article>
+
+              <article class="product-card" data-reveal>
+                <a class="product-card__link" href="./product.html?slug=tailored-trousers-obsidian" data-link>
+                  <div class="product-card__media">
+                    <img class="product-card__img" src="https://images.unsplash.com/photo-1520975693364-221b9b17aa43?auto=format&fit=crop&w=1400&q=60" loading="lazy" decoding="async" alt="Tailored Trousers Obsidian" />
+                    <img class="product-card__img is-alt" src="https://images.unsplash.com/photo-1520975697060-0f2c6a0e2f3f?auto=format&fit=crop&w=1400&q=60" loading="lazy" decoding="async" alt="" />
+                  </div>
+                  <div class="product-card__body">
+                    <div class="badges"><span class="badge badge--sale">Sale</span></div>
+                    <h3 class="product-card__title">Tailored Trousers Obsidian</h3>
+                    <div class="product-card__price"><span>6	90 СЃРѕРј</span><span class="product-card__old">8	90 СЃРѕРј</span></div>
+                  </div>
+                </a>
+              </article>
+
+              <article class="product-card" data-reveal>
+                <a class="product-card__link" href="./product.html?slug=soft-hoodie-mist" data-link>
+                  <div class="product-card__media">
+                    <img class="product-card__img" src="https://images.unsplash.com/photo-1520975702793-3dd8b7a3b0ec?auto=format&fit=crop&w=1400&q=60" loading="lazy" decoding="async" alt="Soft Hoodie Mist" />
+                    <img class="product-card__img is-alt" src="https://images.unsplash.com/photo-1520975700308-3f2c2d4d5d0b?auto=format&fit=crop&w=1400&q=60" loading="lazy" decoding="async" alt="" />
+                  </div>
+                  <div class="product-card__body">
+                    <div class="badges"><span class="badge badge--new">New</span></div>
+                    <h3 class="product-card__title">Soft Hoodie Mist</h3>
+                    <div class="product-card__price"><span>4	90 СЃРѕРј</span></div>
+                  </div>
+                </a>
+              </article>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <div class="container footer__inner">
+          <div class="footer__col">
+            <div class="footer__brand">AURUM</div>
+            <p class="muted">Premium minimal clothing store UI.</p>
+          </div>
+          <div class="footer__col">
+            <div class="footer__title">Social</div>
+            <a class="footer__link" href="#">Instagram</a>
+            <a class="footer__link" href="#">TikTok</a>
+            <a class="footer__link" href="#">Pinterest</a>
+          </div>
+          <div class="footer__col">
+            <div class="footer__title">Info</div>
+            <a class="footer__link" href="#">Policy</a>
+            <a class="footer__link" href="#">Terms</a>
+            <a class="footer__link" href="#">Contacts</a>
+          </div>
+        </div>
+        <div class="container footer__bottom">
+          <span class="muted">В© <span data-year></span> AURUM</span>
+        </div>
+      </footer>
+    </div>
+
+    <div class="toast-stack" data-toast-stack aria-live="polite" aria-atomic="true"></div>
+
+    <script type="module" src="./assets/js/pages/home.js"></script>
+  </body>
+</html>
+

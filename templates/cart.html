@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cart — AURUM</title>
+    <meta name="description" content="Корзина и оформление заказа AURUM." />
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+  </head>
+  <body>
+    <div class="page" data-page>
+      <header class="header" data-header>
+        <div class="container header__inner">
+          <a class="logo" href="./index.html" data-link aria-label="AURUM Home">AURUM</a>
+
+          <nav class="nav" aria-label="Основное меню">
+            <a class="nav__link" href="./shop.html" data-link>Shop</a>
+            <a class="nav__link" href="./shop.html?tag=new" data-link>New</a>
+            <a class="nav__link" href="./shop.html?tag=sale" data-link>Sale</a>
+          </nav>
+
+          <div class="header__actions">
+            <a class="icon-btn" href="./cart.html" data-link aria-label="Cart">
+              <span class="icon icon--cart" aria-hidden="true"></span>
+              <span class="cart-badge" data-cart-count aria-label="Items in cart">0</span>
+            </a>
+            <button class="icon-btn header__burger" type="button" data-menu-open aria-label="Open menu">
+              <span class="icon icon--menu" aria-hidden="true"></span>
+            </button>
+          </div>
+        </div>
+
+        <div class="menu-overlay" data-menu-overlay aria-hidden="true">
+          <div class="menu-overlay__panel" role="dialog" aria-modal="true" aria-label="Mobile menu">
+            <div class="menu-overlay__top">
+              <span class="menu-overlay__brand">AURUM</span>
+              <button class="icon-btn" type="button" data-menu-close aria-label="Close menu">
+                <span class="icon icon--close" aria-hidden="true"></span>
+              </button>
+            </div>
+            <div class="menu-overlay__links">
+              <a class="menu-overlay__link" href="./shop.html" data-link>Shop</a>
+              <a class="menu-overlay__link" href="./shop.html?tag=new" data-link>New</a>
+              <a class="menu-overlay__link" href="./shop.html?tag=sale" data-link>Sale</a>
+              <a class="menu-overlay__link" href="./cart.html" data-link>Cart</a>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main>
+        <section class="section section--tight">
+          <div class="container">
+            <div class="cart-top" data-reveal>
+              <h1 class="h1">Cart</h1>
+              <p class="muted">Оформление на этой же странице.</p>
+            </div>
+
+            <div class="cart-layout">
+              <section class="cart-list" aria-label="Cart items">
+                <div class="empty" data-cart-empty hidden>
+                  <div class="empty__title">Cart is empty</div>
+                  <p class="muted">Добавь товары из каталога.</p>
+                  <a class="btn btn--primary" href="./shop.html" data-link>Go to shop</a>
+                </div>
+
+                <div class="cart-items" data-cart-items></div>
+              </section>
+
+              <aside class="cart-summary" aria-label="Summary" data-reveal data-reveal-delay="70">
+                <div class="card">
+                  <div class="card__title">Summary</div>
+                  <div class="summary-row">
+                    <span class="muted">Subtotal</span>
+                    <span data-subtotal>0</span>
+                  </div>
+                  <div class="summary-row">
+                    <span class="muted">Delivery</span>
+                    <span class="muted">—</span>
+                  </div>
+                  <div class="summary-row summary-row--total">
+                    <span>Total</span>
+                    <span data-total>0</span>
+                  </div>
+                  <button class="btn btn--primary" type="button" data-scroll-checkout>Checkout</button>
+                </div>
+              </aside>
+            </div>
+
+            <section class="section" aria-label="Checkout" data-checkout>
+              <div class="section__head" data-reveal>
+                <h2 class="h2">Checkout</h2>
+                <p class="muted">Заполни данные — и мы свяжемся.</p>
+              </div>
+
+              <form class="form" data-form novalidate>
+                <div class="form__grid">
+                  <label class="input">
+                    <span class="input__label">Name *</span>
+                    <input name="name" type="text" autocomplete="name" required />
+                    <span class="field-error" data-err="name" hidden></span>
+                  </label>
+
+                  <label class="input">
+                    <span class="input__label">Phone *</span>
+                    <input name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="+996 ___ ___ ___" required />
+                    <span class="field-error" data-err="phone" hidden></span>
+                  </label>
+
+                  <label class="input">
+                    <span class="input__label">City</span>
+                    <input name="city" type="text" autocomplete="address-level2" />
+                    <span class="field-error" data-err="city" hidden></span>
+                  </label>
+
+                  <label class="input form__span2">
+                    <span class="input__label">Address *</span>
+                    <input name="address" type="text" autocomplete="street-address" required />
+                    <span class="field-error" data-err="address" hidden></span>
+                  </label>
+
+                  <label class="input form__span2">
+                    <span class="input__label">Comment</span>
+                    <input name="comment" type="text" />
+                    <span class="field-error" data-err="comment" hidden></span>
+                  </label>
+                </div>
+
+                <div class="form__block">
+                  <div class="form__label">Payment</div>
+                  <div class="radio-row" role="radiogroup" aria-label="Payment method">
+                    <label class="radio">
+                      <input type="radio" name="payment" value="cash" checked />
+                      <span>Cash</span>
+                    </label>
+                    <label class="radio">
+                      <input type="radio" name="payment" value="transfer" />
+                      <span>Card transfer</span>
+                    </label>
+                    <label class="radio">
+                      <input type="radio" name="payment" value="online" />
+                      <span>Online</span>
+                    </label>
+                  </div>
+                </div>
+
+                <button class="btn btn--primary" type="submit" data-submit disabled>Place order</button>
+              </form>
+            </section>
+          </div>
+        </section>
+
+        <div class="modal" data-success-modal aria-hidden="true">
+          <div class="modal__backdrop" data-close-success></div>
+          <div class="modal__panel" role="dialog" aria-modal="true" aria-label="Order success">
+            <div class="modal__head">
+              <div class="modal__title">Заказ принят</div>
+              <button class="icon-btn" type="button" data-close-success aria-label="Close">
+                <span class="icon icon--close" aria-hidden="true"></span>
+              </button>
+            </div>
+            <div class="modal__body">
+              <p class="muted">Номер заказа: <strong data-order-id></strong></p>
+              <a class="btn btn--primary" href="./shop.html" data-link>Вернуться в магазин</a>
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container footer__inner">
+          <div class="footer__col">
+            <div class="footer__brand">AURUM</div>
+            <p class="muted">Premium minimal clothing store UI.</p>
+          </div>
+          <div class="footer__col">
+            <div class="footer__title">Social</div>
+            <a class="footer__link" href="#">Instagram</a>
+            <a class="footer__link" href="#">TikTok</a>
+            <a class="footer__link" href="#">Pinterest</a>
+          </div>
+          <div class="footer__col">
+            <div class="footer__title">Info</div>
+            <a class="footer__link" href="#">Policy</a>
+            <a class="footer__link" href="#">Terms</a>
+            <a class="footer__link" href="#">Contacts</a>
+          </div>
+        </div>
+        <div class="container footer__bottom">
+          <span class="muted">© <span data-year></span> AURUM</span>
+        </div>
+      </footer>
+    </div>
+
+    <div class="toast-stack" data-toast-stack aria-live="polite" aria-atomic="true"></div>
+
+    <script type="module" src="./assets/js/pages/cart.js"></script>
+  </body>
+</html>

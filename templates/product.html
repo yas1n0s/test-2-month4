@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product — AURUM</title>
+    <meta name="description" content="Страница товара AURUM." />
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+  </head>
+  <body>
+    <div class="page" data-page>
+      <header class="header" data-header>
+        <div class="container header__inner">
+          <a class="logo" href="./index.html" data-link aria-label="AURUM Home">AURUM</a>
+
+          <nav class="nav" aria-label="Основное меню">
+            <a class="nav__link" href="./shop.html" data-link>Shop</a>
+            <a class="nav__link" href="./shop.html?tag=new" data-link>New</a>
+            <a class="nav__link" href="./shop.html?tag=sale" data-link>Sale</a>
+          </nav>
+
+          <div class="header__actions">
+            <a class="icon-btn" href="./cart.html" data-link aria-label="Cart">
+              <span class="icon icon--cart" aria-hidden="true"></span>
+              <span class="cart-badge" data-cart-count aria-label="Items in cart">0</span>
+            </a>
+            <button class="icon-btn header__burger" type="button" data-menu-open aria-label="Open menu">
+              <span class="icon icon--menu" aria-hidden="true"></span>
+            </button>
+          </div>
+        </div>
+
+        <div class="menu-overlay" data-menu-overlay aria-hidden="true">
+          <div class="menu-overlay__panel" role="dialog" aria-modal="true" aria-label="Mobile menu">
+            <div class="menu-overlay__top">
+              <span class="menu-overlay__brand">AURUM</span>
+              <button class="icon-btn" type="button" data-menu-close aria-label="Close menu">
+                <span class="icon icon--close" aria-hidden="true"></span>
+              </button>
+            </div>
+            <div class="menu-overlay__links">
+              <a class="menu-overlay__link" href="./shop.html" data-link>Shop</a>
+              <a class="menu-overlay__link" href="./shop.html?tag=new" data-link>New</a>
+              <a class="menu-overlay__link" href="./shop.html?tag=sale" data-link>Sale</a>
+              <a class="menu-overlay__link" href="./cart.html" data-link>Cart</a>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main>
+        <section class="section section--tight">
+          <div class="container">
+            <div class="breadcrumbs" data-reveal>
+              <a href="./shop.html" data-link>Shop</a>
+              <span class="muted">/</span>
+              <span data-bc-title class="muted">Product</span>
+            </div>
+
+            <div class="product" data-product>
+              <div class="product__media" data-reveal>
+                <div class="gallery" data-gallery>
+                  <div class="gallery__thumbs" data-thumbs aria-label="Thumbnails"></div>
+                  <div class="gallery__main" data-main>
+                    <div class="gallery__main-inner" data-main-inner>
+                      <div class="gallery__skeleton skeleton" aria-hidden="true"></div>
+                    </div>
+                    <button class="icon-btn gallery__nav gallery__nav--prev" type="button" data-prev aria-label="Previous image">
+                      <span class="icon icon--chev" aria-hidden="true"></span>
+                    </button>
+                    <button class="icon-btn gallery__nav gallery__nav--next" type="button" data-next aria-label="Next image">
+                      <span class="icon icon--chev" aria-hidden="true"></span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="product__info" data-reveal data-reveal-delay="70">
+                <div class="product__head">
+                  <h1 class="h1" data-title>Loading…</h1>
+                  <div class="badges" data-badges></div>
+                </div>
+
+                <div class="price" data-price></div>
+                <p class="muted" data-short></p>
+
+                <div class="variant" aria-label="Size">
+                  <div class="variant__label">Size</div>
+                  <div class="seg" data-sizes></div>
+                  <div class="field-error" data-size-error hidden>Выбери размер</div>
+                </div>
+
+                <div class="variant" aria-label="Color">
+                  <div class="variant__label">Color</div>
+                  <div class="swatches" data-colors></div>
+                </div>
+
+                <div class="cta">
+                  <button class="btn btn--primary" type="button" data-add>Add to cart</button>
+                  <button class="btn btn--secondary" type="button" data-buy>Buy now</button>
+                </div>
+
+                <div class="accordion" data-accordion>
+                  <button class="accordion__btn" type="button" aria-expanded="false" data-acc-btn>
+                    Delivery & Returns
+                    <span class="icon icon--plus" aria-hidden="true"></span>
+                  </button>
+                  <div class="accordion__panel" hidden data-acc-panel>
+                    <p class="muted">
+                      Доставка по договорённости. Возврат в течение 7 дней при сохранении товарного вида.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <section class="section" aria-label="Similar products">
+              <div class="section__head" data-reveal>
+                <h2 class="h2">Similar</h2>
+                <p class="muted">Ещё варианты в том же настроении.</p>
+              </div>
+              <div class="product-grid" data-similar-grid>
+                <div class="product-card skeleton" aria-hidden="true"></div>
+                <div class="product-card skeleton" aria-hidden="true"></div>
+                <div class="product-card skeleton" aria-hidden="true"></div>
+                <div class="product-card skeleton" aria-hidden="true"></div>
+              </div>
+            </section>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <div class="container footer__inner">
+          <div class="footer__col">
+            <div class="footer__brand">AURUM</div>
+            <p class="muted">Premium minimal clothing store UI.</p>
+          </div>
+          <div class="footer__col">
+            <div class="footer__title">Social</div>
+            <a class="footer__link" href="#">Instagram</a>
+            <a class="footer__link" href="#">TikTok</a>
+            <a class="footer__link" href="#">Pinterest</a>
+          </div>
+          <div class="footer__col">
+            <div class="footer__title">Info</div>
+            <a class="footer__link" href="#">Policy</a>
+            <a class="footer__link" href="#">Terms</a>
+            <a class="footer__link" href="#">Contacts</a>
+          </div>
+        </div>
+        <div class="container footer__bottom">
+          <span class="muted">© <span data-year></span> AURUM</span>
+        </div>
+      </footer>
+    </div>
+
+    <div class="toast-stack" data-toast-stack aria-live="polite" aria-atomic="true"></div>
+
+    <script type="module" src="./assets/js/pages/product.js"></script>
+  </body>
+</html>
